@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesApp.API", "SalesApp.API\SalesApp.API.csproj", "{5F7BE6F5-9D7B-457A-8499-C22C851586CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesApp.lib", "SalesApp.lib\SalesApp.lib.csproj", "{9CF0968D-A345-4881-820C-0E5858D4688A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesApp.db", "SalesApp.db\SalesApp.db.csproj", "{48BB338B-939F-409F-B79F-128711A28348}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F7BE6F5-9D7B-457A-8499-C22C851586CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7BE6F5-9D7B-457A-8499-C22C851586CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7BE6F5-9D7B-457A-8499-C22C851586CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7BE6F5-9D7B-457A-8499-C22C851586CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF0968D-A345-4881-820C-0E5858D4688A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF0968D-A345-4881-820C-0E5858D4688A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF0968D-A345-4881-820C-0E5858D4688A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF0968D-A345-4881-820C-0E5858D4688A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BB338B-939F-409F-B79F-128711A28348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BB338B-939F-409F-B79F-128711A28348}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BB338B-939F-409F-B79F-128711A28348}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BB338B-939F-409F-B79F-128711A28348}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
