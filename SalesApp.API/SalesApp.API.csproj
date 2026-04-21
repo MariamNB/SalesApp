@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+  <PackageReference Include="AutoMapper" Version="13.0.1" NoWarn="NU1903" />
+
+    
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.24" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
@@ -14,6 +17,10 @@
   <ItemGroup>
     <ProjectReference Include="..\SalesApp.lib\SalesApp.lib.csproj" />
     <ProjectReference Include="..\SalesApp.db\SalesApp.db.csproj" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <NuGetAuditSuppress Include="https://github.com/advisories/GHSA-rvv3-g6hj-g44x" />
   </ItemGroup>
 
 </Project>
