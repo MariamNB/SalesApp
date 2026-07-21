@@ -25,6 +25,10 @@ namespace SalesApp.API.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> AddNew(ProductDto item)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var result = await srvProduct.AddAsync(item);
             return result != null ? Ok(result) : BadRequest(item);
 
@@ -33,6 +37,10 @@ namespace SalesApp.API.Controllers
         [HttpPost("update")]
         public async Task<IActionResult> Update(UpdateProductDto item)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var result = await srvProduct.UpdateAsync(item);
             return result != null ? Ok(result) : BadRequest(item);
         }

@@ -26,6 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.AddMiddleWareDb();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

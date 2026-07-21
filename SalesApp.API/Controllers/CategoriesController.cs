@@ -26,6 +26,10 @@ namespace SalesApp.API.Controllers
         [HttpPost("add")]
         public async Task<IActionResult> AddNew(CategoryDto item)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var result = await srvCategory.AddAsync(item);
             return result != null ? Ok(result) : BadRequest(item);
 
@@ -34,6 +38,10 @@ namespace SalesApp.API.Controllers
         [HttpPost("update")]
         public async Task<IActionResult> Update(UpdateCategoryDTO item)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var result = await srvCategory.UpdateAsync(item);
             return result != null ? Ok(result) : BadRequest(item);
         }
