@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using SalesApp.API.Base;
-using SalesApp.db.Entities;
 using SalesApp.lib.DTOs;
 
 namespace SalesApp.API.Controllers
@@ -53,5 +52,12 @@ namespace SalesApp.API.Controllers
             return result != null ? Ok(result) : BadRequest(id);
         }
         
+        [HttpGet("getProducts/{catId}")]
+        public async Task<IActionResult> GetProducts(Guid catId)
+        {
+            var result = await srvCategory.GetProductsWithCategory(catId);
+            return result.Any()? Ok(result) : NotFound();
+        }
+
     }
 }

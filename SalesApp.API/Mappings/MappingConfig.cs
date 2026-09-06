@@ -1,6 +1,11 @@
 using AutoMapper;
+using DTOs.Identity;
+using DTOs.Payments;
+using Entities.Identity;
+using Entities.Paymets;
 using SalesApp.db.Entities;
 using SalesApp.lib.DTOs;
+using SalesApp.lib.DTOs.Carts;
 
 namespace SalesApp.API.Mappings
 {
@@ -13,9 +18,14 @@ namespace SalesApp.API.Mappings
             CreateMap<ProductDto, Product>().MaxDepth(10);
 
             CreateMap<Category, GetCategoryDto>();
-            CreateMap<Product, GetCategoryDto>();
+            CreateMap<Product, GetProductDto>();
 
-      
+            CreateMap<CreateUser, AppUser>();
+            CreateMap<LogInUser, AppUser>();
+
+            CreateMap<PaymentMehodDto, PaymentMethod>();
+
+            CreateMap<ProductHistory, ProductHistryDto>();
         }
     }
 }

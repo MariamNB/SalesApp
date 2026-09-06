@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 using AutoMapper;
 using SalesApp.API.Base;
 using SalesApp.db.Base;
+using SalesApp.db.Base.Products;
 using SalesApp.db.Entities;
 using SalesApp.lib.DTOs;
 
 namespace SalesApp.lib.Services
 {
-    public class CategoryService(IGeneralRepo<Category> category, IMapper mapper) : ICategoryService
+    public class CategoryService(IGeneralRepo<Category> category, IMapper mapper
+        ,ICategory categorySrv) : ICategoryService
     {
         public async Task<ResponseDto> AddAsync(CategoryDto entity)
         {
@@ -77,6 +79,15 @@ namespace SalesApp.lib.Services
             {
                 return new GetCategoryDto();
             }
+        }
+
+        public async Task<IEnumerable<ProductDto>> GetProductsWithCategory(Guid id)
+        {
+            var products = await categorySrv.GetProductsWithCategory(id);
+            if (!products.Any()) return [];
+
+            return mapper.Map<IEnumerable<ProductDto>>(products);
+
         }
 
         public async Task<ResponseDto> UpdateAsync(UpdateCategoryDTO entity)
