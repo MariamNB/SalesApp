@@ -14,5 +14,6 @@ namespace SalesApp.API.Base
         Task<ResponseDto> AddAsync(CategoryDto entity);
         Task<ResponseDto> UpdateAsync(UpdateCategoryDTO entity);
         Task<ResponseDto> DeleteAsync(Guid id);
+        Task<IEnumerable<ProductDto>> GetProductsWithCategory(Guid id);
     }
 }
